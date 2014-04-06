@@ -8,11 +8,21 @@
 
 #import "PHSAppDelegate.h"
 
+@interface PHSAppDelegate ()
+
+@property (nonatomic, strong) UIWindow *keyWindow;
+
+@end
+
 @implementation PHSAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Override point for customization after application launch.
+    _keyWindow = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    
+    
+    
+    
     return YES;
 }
 							

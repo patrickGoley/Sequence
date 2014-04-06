@@ -10,4 +10,8 @@
 
 @interface PHSViewController : UIViewController
 
+- (instancetype)initWithNib;
+
++ (NSString *)nibName;
+
 @end
