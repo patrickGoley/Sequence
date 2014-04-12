@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="5063" systemVersion="13C64" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="Sequence" representedClassName="Phase" syncable="YES">
+        <attribute name="createdDate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="displayName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="sequenceId" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="userDescription" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="entries" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="SequenceEntry" inverseName="sequence" inverseEntity="SequenceEntry" syncable="YES"/>
+    </entity>
+    <entity name="SequenceEntry" representedClassName="PhaseEntry" syncable="YES">
+        <attribute name="createdDate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="entryId" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="originalImagePath" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="remoteImageURL" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="userDescription" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="sequence" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Sequence" inverseName="entries" inverseEntity="Sequence" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Sequence" positionX="160" positionY="192" width="128" height="120"/>
+        <element name="SequenceEntry" positionX="160" positionY="192" width="128" height="135"/>
+    </elements>
+</model>

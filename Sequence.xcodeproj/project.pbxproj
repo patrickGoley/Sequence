@@ -1,0 +1,731 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		16EEEF4A11D443BFBDAE47CB /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F54CE842540A4F86A3BEAC2F /* libPods.a */; };
+		4399013918F1C9C700F1F96A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4399013818F1C9C700F1F96A /* Foundation.framework */; };
+		4399013B18F1C9C700F1F96A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4399013A18F1C9C700F1F96A /* CoreGraphics.framework */; };
+		4399013D18F1C9C700F1F96A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4399013C18F1C9C700F1F96A /* UIKit.framework */; };
+		4399015818F1C9C700F1F96A /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4399015718F1C9C700F1F96A /* XCTest.framework */; };
+		4399015918F1C9C700F1F96A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4399013818F1C9C700F1F96A /* Foundation.framework */; };
+		4399015A18F1C9C700F1F96A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4399013C18F1C9C700F1F96A /* UIKit.framework */; };
+		4399019F18F1D7D700F1F96A /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4399019E18F1D7D700F1F96A /* CoreData.framework */; };
+		43BCD4D118F8D5D400F831C0 /* _Sequence.m in Sources */ = {isa = PBXBuildFile; fileRef = 43BCD4CA18F8D5D400F831C0 /* _Sequence.m */; };
+		43BCD4D218F8D5D400F831C0 /* _SequenceEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = 43BCD4CC18F8D5D400F831C0 /* _SequenceEntry.m */; };
+		43BCD4D318F8D5D400F831C0 /* Sequence.m in Sources */ = {isa = PBXBuildFile; fileRef = 43BCD4CE18F8D5D400F831C0 /* Sequence.m */; };
+		43BCD4D418F8D5D400F831C0 /* SequenceEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = 43BCD4D018F8D5D400F831C0 /* SequenceEntry.m */; };
+		43BCD4DB18F8D8A700F831C0 /* SQNAddEntryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 43BCD4D918F8D8A700F831C0 /* SQNAddEntryViewController.m */; };
+		43BCD4DC18F8D8A700F831C0 /* SQNAddEntryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 43BCD4DA18F8D8A700F831C0 /* SQNAddEntryViewController.xib */; };
+		43BCD4E318F8D9BF00F831C0 /* SQNCameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 43BCD4E118F8D9BF00F831C0 /* SQNCameraViewController.m */; };
+		43BCD4E418F8D9BF00F831C0 /* SQNCameraViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 43BCD4E218F8D9BF00F831C0 /* SQNCameraViewController.xib */; };
+		43BCD4E718F8D9EB00F831C0 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43BCD4E618F8D9EB00F831C0 /* AVFoundation.framework */; };
+		43BCD4E918F8E15D00F831C0 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43BCD4E818F8E15D00F831C0 /* AssetsLibrary.framework */; };
+		43CB42B518F7691C00F1166B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 43CB428D18F7691C00F1166B /* InfoPlist.strings */; };
+		43CB42BA18F7691C00F1166B /* NSManagedObject+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 43CB429B18F7691C00F1166B /* NSManagedObject+Additions.m */; };
+		43CB42BB18F7691C00F1166B /* SequenceModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 43CB429C18F7691C00F1166B /* SequenceModel.xcdatamodeld */; };
+		43CB42BC18F7691C00F1166B /* SQNCoreDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 43CB42A018F7691C00F1166B /* SQNCoreDataManager.m */; };
+		43CB42BD18F7691C00F1166B /* SQNImageCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 43CB42A318F7691C00F1166B /* SQNImageCache.m */; };
+		43CB42BE18F7691C00F1166B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 43CB42A418F7691C00F1166B /* Images.xcassets */; };
+		43CB42C018F7691C00F1166B /* SQNAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 43CB42A718F7691C00F1166B /* SQNAppDelegate.m */; };
+		43CB42C218F7691C00F1166B /* SQNImageScrubberView.m in Sources */ = {isa = PBXBuildFile; fileRef = 43CB42AC18F7691C00F1166B /* SQNImageScrubberView.m */; };
+		43CB42C318F7691C00F1166B /* SQNSequenceTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 43CB42AE18F7691C00F1166B /* SQNSequenceTableViewController.m */; };
+		43CB42C418F7691C00F1166B /* SQNSequenceTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 43CB42AF18F7691C00F1166B /* SQNSequenceTableViewController.xib */; };
+		43CB42C518F7691C00F1166B /* SQNSequenceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 43CB42B118F7691C00F1166B /* SQNSequenceViewController.m */; };
+		43CB42C618F7691C00F1166B /* SQNSequenceViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 43CB42B218F7691C00F1166B /* SQNSequenceViewController.xib */; };
+		43CB42C718F7691C00F1166B /* SQNViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 43CB42B418F7691C00F1166B /* SQNViewController.m */; };
+		43CB42D118F7696A00F1166B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 43CB42CE18F7696A00F1166B /* main.m */; };
+		43CB42D218F7696A00F1166B /* Sequence-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 43CB42CF18F7696A00F1166B /* Sequence-Info.plist */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4399015B18F1C9C700F1F96A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4399012D18F1C9C700F1F96A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4399013418F1C9C700F1F96A;
+			remoteInfo = Phase;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		4399013518F1C9C700F1F96A /* Sequence.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sequence.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4399013818F1C9C700F1F96A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		4399013A18F1C9C700F1F96A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		4399013C18F1C9C700F1F96A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		4399015618F1C9C700F1F96A /* SequenceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SequenceTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4399015718F1C9C700F1F96A /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		4399019E18F1D7D700F1F96A /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		43BCD4C918F8D5D400F831C0 /* _Sequence.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _Sequence.h; sourceTree = "<group>"; };
+		43BCD4CA18F8D5D400F831C0 /* _Sequence.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _Sequence.m; sourceTree = "<group>"; };
+		43BCD4CB18F8D5D400F831C0 /* _SequenceEntry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _SequenceEntry.h; sourceTree = "<group>"; };
+		43BCD4CC18F8D5D400F831C0 /* _SequenceEntry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _SequenceEntry.m; sourceTree = "<group>"; };
+		43BCD4CD18F8D5D400F831C0 /* Sequence.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Sequence.h; sourceTree = "<group>"; };
+		43BCD4CE18F8D5D400F831C0 /* Sequence.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Sequence.m; sourceTree = "<group>"; };
+		43BCD4CF18F8D5D400F831C0 /* SequenceEntry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SequenceEntry.h; sourceTree = "<group>"; };
+		43BCD4D018F8D5D400F831C0 /* SequenceEntry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SequenceEntry.m; sourceTree = "<group>"; };
+		43BCD4D818F8D8A700F831C0 /* SQNAddEntryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SQNAddEntryViewController.h; sourceTree = "<group>"; };
+		43BCD4D918F8D8A700F831C0 /* SQNAddEntryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SQNAddEntryViewController.m; sourceTree = "<group>"; };
+		43BCD4DA18F8D8A700F831C0 /* SQNAddEntryViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SQNAddEntryViewController.xib; sourceTree = "<group>"; };
+		43BCD4E018F8D9BF00F831C0 /* SQNCameraViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SQNCameraViewController.h; sourceTree = "<group>"; };
+		43BCD4E118F8D9BF00F831C0 /* SQNCameraViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SQNCameraViewController.m; sourceTree = "<group>"; };
+		43BCD4E218F8D9BF00F831C0 /* SQNCameraViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SQNCameraViewController.xib; sourceTree = "<group>"; };
+		43BCD4E618F8D9EB00F831C0 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		43BCD4E818F8E15D00F831C0 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
+		43CB428E18F7691C00F1166B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		43CB429A18F7691C00F1166B /* NSManagedObject+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSManagedObject+Additions.h"; sourceTree = "<group>"; };
+		43CB429B18F7691C00F1166B /* NSManagedObject+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSManagedObject+Additions.m"; sourceTree = "<group>"; };
+		43CB429D18F7691C00F1166B /* SequenceModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SequenceModel.xcdatamodel; sourceTree = "<group>"; };
+		43CB429E18F7691C00F1166B /* SequenceModel_0.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SequenceModel_0.xcdatamodel; sourceTree = "<group>"; };
+		43CB429F18F7691C00F1166B /* SQNCoreDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SQNCoreDataManager.h; sourceTree = "<group>"; };
+		43CB42A018F7691C00F1166B /* SQNCoreDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SQNCoreDataManager.m; sourceTree = "<group>"; };
+		43CB42A218F7691C00F1166B /* SQNImageCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SQNImageCache.h; sourceTree = "<group>"; };
+		43CB42A318F7691C00F1166B /* SQNImageCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SQNImageCache.m; sourceTree = "<group>"; };
+		43CB42A418F7691C00F1166B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		43CB42A618F7691C00F1166B /* SQNAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SQNAppDelegate.h; sourceTree = "<group>"; };
+		43CB42A718F7691C00F1166B /* SQNAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SQNAppDelegate.m; sourceTree = "<group>"; };
+		43CB42AB18F7691C00F1166B /* SQNImageScrubberView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SQNImageScrubberView.h; sourceTree = "<group>"; };
+		43CB42AC18F7691C00F1166B /* SQNImageScrubberView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SQNImageScrubberView.m; sourceTree = "<group>"; };
+		43CB42AD18F7691C00F1166B /* SQNSequenceTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SQNSequenceTableViewController.h; sourceTree = "<group>"; };
+		43CB42AE18F7691C00F1166B /* SQNSequenceTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SQNSequenceTableViewController.m; sourceTree = "<group>"; };
+		43CB42AF18F7691C00F1166B /* SQNSequenceTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SQNSequenceTableViewController.xib; sourceTree = "<group>"; };
+		43CB42B018F7691C00F1166B /* SQNSequenceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SQNSequenceViewController.h; sourceTree = "<group>"; };
+		43CB42B118F7691C00F1166B /* SQNSequenceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SQNSequenceViewController.m; sourceTree = "<group>"; };
+		43CB42B218F7691C00F1166B /* SQNSequenceViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SQNSequenceViewController.xib; sourceTree = "<group>"; };
+		43CB42B318F7691C00F1166B /* SQNViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SQNViewController.h; sourceTree = "<group>"; };
+		43CB42B418F7691C00F1166B /* SQNViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SQNViewController.m; sourceTree = "<group>"; };
+		43CB42CE18F7696A00F1166B /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		43CB42CF18F7696A00F1166B /* Sequence-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Sequence-Info.plist"; sourceTree = "<group>"; };
+		43CB42D018F7696A00F1166B /* Sequence-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Sequence-Prefix.pch"; sourceTree = "<group>"; };
+		F54CE842540A4F86A3BEAC2F /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		F95CC7E9D09A4FE58023101D /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4399013218F1C9C700F1F96A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				43BCD4E918F8E15D00F831C0 /* AssetsLibrary.framework in Frameworks */,
+				43BCD4E718F8D9EB00F831C0 /* AVFoundation.framework in Frameworks */,
+				4399019F18F1D7D700F1F96A /* CoreData.framework in Frameworks */,
+				4399013B18F1C9C700F1F96A /* CoreGraphics.framework in Frameworks */,
+				4399013D18F1C9C700F1F96A /* UIKit.framework in Frameworks */,
+				4399013918F1C9C700F1F96A /* Foundation.framework in Frameworks */,
+				16EEEF4A11D443BFBDAE47CB /* libPods.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4399015318F1C9C700F1F96A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4399015818F1C9C700F1F96A /* XCTest.framework in Frameworks */,
+				4399015A18F1C9C700F1F96A /* UIKit.framework in Frameworks */,
+				4399015918F1C9C700F1F96A /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4399012C18F1C9C700F1F96A = {
+			isa = PBXGroup;
+			children = (
+				43CB428C18F7691C00F1166B /* Sequence */,
+				4399013718F1C9C700F1F96A /* Frameworks */,
+				4399013618F1C9C700F1F96A /* Products */,
+				F95CC7E9D09A4FE58023101D /* Pods.xcconfig */,
+			);
+			sourceTree = "<group>";
+		};
+		4399013618F1C9C700F1F96A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4399013518F1C9C700F1F96A /* Sequence.app */,
+				4399015618F1C9C700F1F96A /* SequenceTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4399013718F1C9C700F1F96A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				43BCD4E818F8E15D00F831C0 /* AssetsLibrary.framework */,
+				43BCD4E618F8D9EB00F831C0 /* AVFoundation.framework */,
+				4399019E18F1D7D700F1F96A /* CoreData.framework */,
+				4399013818F1C9C700F1F96A /* Foundation.framework */,
+				4399013A18F1C9C700F1F96A /* CoreGraphics.framework */,
+				4399013C18F1C9C700F1F96A /* UIKit.framework */,
+				4399015718F1C9C700F1F96A /* XCTest.framework */,
+				F54CE842540A4F86A3BEAC2F /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		43BCD4D518F8D5DA00F831C0 /* Machine Files */ = {
+			isa = PBXGroup;
+			children = (
+				43BCD4C918F8D5D400F831C0 /* _Sequence.h */,
+				43BCD4CA18F8D5D400F831C0 /* _Sequence.m */,
+				43BCD4CB18F8D5D400F831C0 /* _SequenceEntry.h */,
+				43BCD4CC18F8D5D400F831C0 /* _SequenceEntry.m */,
+			);
+			name = "Machine Files";
+			sourceTree = "<group>";
+		};
+		43BCD4D618F8D85900F831C0 /* Sequence Table View */ = {
+			isa = PBXGroup;
+			children = (
+				43CB42AD18F7691C00F1166B /* SQNSequenceTableViewController.h */,
+				43CB42AE18F7691C00F1166B /* SQNSequenceTableViewController.m */,
+				43CB42AF18F7691C00F1166B /* SQNSequenceTableViewController.xib */,
+			);
+			name = "Sequence Table View";
+			sourceTree = "<group>";
+		};
+		43BCD4D718F8D86900F831C0 /* Sequence Detail View */ = {
+			isa = PBXGroup;
+			children = (
+				43CB42AB18F7691C00F1166B /* SQNImageScrubberView.h */,
+				43CB42AC18F7691C00F1166B /* SQNImageScrubberView.m */,
+				43CB42B018F7691C00F1166B /* SQNSequenceViewController.h */,
+				43CB42B118F7691C00F1166B /* SQNSequenceViewController.m */,
+				43CB42B218F7691C00F1166B /* SQNSequenceViewController.xib */,
+			);
+			name = "Sequence Detail View";
+			sourceTree = "<group>";
+		};
+		43BCD4DD18F8D8AC00F831C0 /* Add Entry View */ = {
+			isa = PBXGroup;
+			children = (
+				43BCD4D818F8D8A700F831C0 /* SQNAddEntryViewController.h */,
+				43BCD4D918F8D8A700F831C0 /* SQNAddEntryViewController.m */,
+				43BCD4DA18F8D8A700F831C0 /* SQNAddEntryViewController.xib */,
+			);
+			name = "Add Entry View";
+			sourceTree = "<group>";
+		};
+		43BCD4E518F8D9C400F831C0 /* Camera View */ = {
+			isa = PBXGroup;
+			children = (
+				43BCD4E018F8D9BF00F831C0 /* SQNCameraViewController.h */,
+				43BCD4E118F8D9BF00F831C0 /* SQNCameraViewController.m */,
+				43BCD4E218F8D9BF00F831C0 /* SQNCameraViewController.xib */,
+			);
+			name = "Camera View";
+			sourceTree = "<group>";
+		};
+		43CB428C18F7691C00F1166B /* Sequence */ = {
+			isa = PBXGroup;
+			children = (
+				43CB42AA18F7691C00F1166B /* Views */,
+				43CB428F18F7691C00F1166B /* Functionality */,
+				43CB42D318F7697200F1166B /* Supporting Files */,
+				43CB42A418F7691C00F1166B /* Images.xcassets */,
+				43CB42A618F7691C00F1166B /* SQNAppDelegate.h */,
+				43CB42A718F7691C00F1166B /* SQNAppDelegate.m */,
+			);
+			path = Sequence;
+			sourceTree = "<group>";
+		};
+		43CB428F18F7691C00F1166B /* Functionality */ = {
+			isa = PBXGroup;
+			children = (
+				43CB429018F7691C00F1166B /* CoreData */,
+				43CB42A118F7691C00F1166B /* ImageCache */,
+			);
+			path = Functionality;
+			sourceTree = "<group>";
+		};
+		43CB429018F7691C00F1166B /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				43CB429118F7691C00F1166B /* Models */,
+				43CB429A18F7691C00F1166B /* NSManagedObject+Additions.h */,
+				43CB429B18F7691C00F1166B /* NSManagedObject+Additions.m */,
+				43CB429C18F7691C00F1166B /* SequenceModel.xcdatamodeld */,
+				43CB429F18F7691C00F1166B /* SQNCoreDataManager.h */,
+				43CB42A018F7691C00F1166B /* SQNCoreDataManager.m */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		43CB429118F7691C00F1166B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				43BCD4D518F8D5DA00F831C0 /* Machine Files */,
+				43BCD4CD18F8D5D400F831C0 /* Sequence.h */,
+				43BCD4CE18F8D5D400F831C0 /* Sequence.m */,
+				43BCD4CF18F8D5D400F831C0 /* SequenceEntry.h */,
+				43BCD4D018F8D5D400F831C0 /* SequenceEntry.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		43CB42A118F7691C00F1166B /* ImageCache */ = {
+			isa = PBXGroup;
+			children = (
+				43CB42A218F7691C00F1166B /* SQNImageCache.h */,
+				43CB42A318F7691C00F1166B /* SQNImageCache.m */,
+			);
+			path = ImageCache;
+			sourceTree = "<group>";
+		};
+		43CB42AA18F7691C00F1166B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				43CB42B318F7691C00F1166B /* SQNViewController.h */,
+				43CB42B418F7691C00F1166B /* SQNViewController.m */,
+				43BCD4D618F8D85900F831C0 /* Sequence Table View */,
+				43BCD4D718F8D86900F831C0 /* Sequence Detail View */,
+				43BCD4E518F8D9C400F831C0 /* Camera View */,
+				43BCD4DD18F8D8AC00F831C0 /* Add Entry View */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		43CB42D318F7697200F1166B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				43CB42CE18F7696A00F1166B /* main.m */,
+				43CB42CF18F7696A00F1166B /* Sequence-Info.plist */,
+				43CB42D018F7696A00F1166B /* Sequence-Prefix.pch */,
+				43CB428D18F7691C00F1166B /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXLegacyTarget section */
+		43CB42D418F76D6800F1166B /* Mogenerator */ = {
+			isa = PBXLegacyTarget;
+			buildArgumentsString = "--model \"${PROJECT_DIR}/Sequence/Functionality/CoreData/SequenceModel.xcdatamodeld\" -O  \"${PROJECT_DIR}/Sequence/Functionality/CoreData/Models\" --template-var arc=true";
+			buildConfigurationList = 43CB42D518F76D6900F1166B /* Build configuration list for PBXLegacyTarget "Mogenerator" */;
+			buildPhases = (
+			);
+			buildToolPath = /usr/bin/mogenerator;
+			buildWorkingDirectory = "";
+			dependencies = (
+			);
+			name = Mogenerator;
+			passBuildSettingsInEnvironment = 1;
+			productName = Mogenerator;
+		};
+/* End PBXLegacyTarget section */
+
+/* Begin PBXNativeTarget section */
+		4399013418F1C9C700F1F96A /* Sequence */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4399016718F1C9C700F1F96A /* Build configuration list for PBXNativeTarget "Sequence" */;
+			buildPhases = (
+				0FD3758B2FA347DFB6D91D39 /* Check Pods Manifest.lock */,
+				4399013118F1C9C700F1F96A /* Sources */,
+				4399013218F1C9C700F1F96A /* Frameworks */,
+				4399013318F1C9C700F1F96A /* Resources */,
+				7E96B6B8E6634B349245D37E /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Sequence;
+			productName = Phase;
+			productReference = 4399013518F1C9C700F1F96A /* Sequence.app */;
+			productType = "com.apple.product-type.application";
+		};
+		4399015518F1C9C700F1F96A /* SequenceTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4399016A18F1C9C700F1F96A /* Build configuration list for PBXNativeTarget "SequenceTests" */;
+			buildPhases = (
+				4399015218F1C9C700F1F96A /* Sources */,
+				4399015318F1C9C700F1F96A /* Frameworks */,
+				4399015418F1C9C700F1F96A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4399015C18F1C9C700F1F96A /* PBXTargetDependency */,
+			);
+			name = SequenceTests;
+			productName = PhaseTests;
+			productReference = 4399015618F1C9C700F1F96A /* SequenceTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4399012D18F1C9C700F1F96A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = SQN;
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "Patrick Goley";
+				TargetAttributes = {
+					4399015518F1C9C700F1F96A = {
+						TestTargetID = 4399013418F1C9C700F1F96A;
+					};
+				};
+			};
+			buildConfigurationList = 4399013018F1C9C700F1F96A /* Build configuration list for PBXProject "Sequence" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 4399012C18F1C9C700F1F96A;
+			productRefGroup = 4399013618F1C9C700F1F96A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4399013418F1C9C700F1F96A /* Sequence */,
+				4399015518F1C9C700F1F96A /* SequenceTests */,
+				43CB42D418F76D6800F1166B /* Mogenerator */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4399013318F1C9C700F1F96A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				43BCD4DC18F8D8A700F831C0 /* SQNAddEntryViewController.xib in Resources */,
+				43CB42B518F7691C00F1166B /* InfoPlist.strings in Resources */,
+				43BCD4E418F8D9BF00F831C0 /* SQNCameraViewController.xib in Resources */,
+				43CB42BE18F7691C00F1166B /* Images.xcassets in Resources */,
+				43CB42C418F7691C00F1166B /* SQNSequenceTableViewController.xib in Resources */,
+				43CB42C618F7691C00F1166B /* SQNSequenceViewController.xib in Resources */,
+				43CB42D218F7696A00F1166B /* Sequence-Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4399015418F1C9C700F1F96A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0FD3758B2FA347DFB6D91D39 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		7E96B6B8E6634B349245D37E /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4399013118F1C9C700F1F96A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				43CB42BA18F7691C00F1166B /* NSManagedObject+Additions.m in Sources */,
+				43BCD4D418F8D5D400F831C0 /* SequenceEntry.m in Sources */,
+				43CB42BB18F7691C00F1166B /* SequenceModel.xcdatamodeld in Sources */,
+				43CB42C718F7691C00F1166B /* SQNViewController.m in Sources */,
+				43BCD4DB18F8D8A700F831C0 /* SQNAddEntryViewController.m in Sources */,
+				43CB42C018F7691C00F1166B /* SQNAppDelegate.m in Sources */,
+				43CB42BD18F7691C00F1166B /* SQNImageCache.m in Sources */,
+				43CB42BC18F7691C00F1166B /* SQNCoreDataManager.m in Sources */,
+				43BCD4D318F8D5D400F831C0 /* Sequence.m in Sources */,
+				43BCD4D118F8D5D400F831C0 /* _Sequence.m in Sources */,
+				43CB42C218F7691C00F1166B /* SQNImageScrubberView.m in Sources */,
+				43CB42C518F7691C00F1166B /* SQNSequenceViewController.m in Sources */,
+				43BCD4D218F8D5D400F831C0 /* _SequenceEntry.m in Sources */,
+				43CB42C318F7691C00F1166B /* SQNSequenceTableViewController.m in Sources */,
+				43BCD4E318F8D9BF00F831C0 /* SQNCameraViewController.m in Sources */,
+				43CB42D118F7696A00F1166B /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4399015218F1C9C700F1F96A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4399015C18F1C9C700F1F96A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4399013418F1C9C700F1F96A /* Sequence */;
+			targetProxy = 4399015B18F1C9C700F1F96A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		43CB428D18F7691C00F1166B /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				43CB428E18F7691C00F1166B /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		4399016518F1C9C700F1F96A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		4399016618F1C9C700F1F96A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		4399016818F1C9C700F1F96A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F95CC7E9D09A4FE58023101D /* Pods.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Sequence/Sequence-Prefix.pch";
+				INFOPLIST_FILE = "Sequence/Sequence-Info.plist";
+				PRODUCT_NAME = Sequence;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		4399016918F1C9C700F1F96A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F95CC7E9D09A4FE58023101D /* Pods.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Sequence/Sequence-Prefix.pch";
+				INFOPLIST_FILE = "Sequence/Sequence-Info.plist";
+				PRODUCT_NAME = Sequence;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		4399016B18F1C9C700F1F96A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Sequence.app/Sequence";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Phase/Phase-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "PhaseTests/SequenceTests-Info.plist";
+				PRODUCT_NAME = SequenceTests;
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		4399016C18F1C9C700F1F96A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Sequence.app/Sequence";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Phase/Phase-Prefix.pch";
+				INFOPLIST_FILE = "PhaseTests/SequenceTests-Info.plist";
+				PRODUCT_NAME = SequenceTests;
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+		43CB42D618F76D6900F1166B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEBUGGING_SYMBOLS = YES;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		43CB42D718F76D6900F1166B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4399013018F1C9C700F1F96A /* Build configuration list for PBXProject "Sequence" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4399016518F1C9C700F1F96A /* Debug */,
+				4399016618F1C9C700F1F96A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4399016718F1C9C700F1F96A /* Build configuration list for PBXNativeTarget "Sequence" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4399016818F1C9C700F1F96A /* Debug */,
+				4399016918F1C9C700F1F96A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4399016A18F1C9C700F1F96A /* Build configuration list for PBXNativeTarget "SequenceTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4399016B18F1C9C700F1F96A /* Debug */,
+				4399016C18F1C9C700F1F96A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		43CB42D518F76D6900F1166B /* Build configuration list for PBXLegacyTarget "Mogenerator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				43CB42D618F76D6900F1166B /* Debug */,
+				43CB42D718F76D6900F1166B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		43CB429C18F7691C00F1166B /* SequenceModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				43CB429D18F7691C00F1166B /* SequenceModel.xcdatamodel */,
+				43CB429E18F7691C00F1166B /* SequenceModel_0.xcdatamodel */,
+			);
+			currentVersion = 43CB429E18F7691C00F1166B /* SequenceModel_0.xcdatamodel */;
+			path = SequenceModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 4399012D18F1C9C700F1F96A /* Project object */;
+}
