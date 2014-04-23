@@ -27,6 +27,28 @@
     return [[SQNCoreDataManager currentContext] executeFetchRequest:request error:nil];
 }
 
++ (instancetype)insertInCurrentContext {
+    
+    Sequence *sequence = [super insertInCurrentContext];
+    
+    sequence.createdDate = [NSDate date];
+    
+    NSFileManager *fileManager = [[NSFileManager alloc] init];
+    
+    BOOL isDirectory;
+    
+    NSString *directoryPath = [sequence sequenceImageDirectory];
+    
+    if ([fileManager fileExistsAtPath:directoryPath isDirectory:&isDirectory]) {
+        
+        [fileManager removeItemAtPath:directoryPath error:nil];
+    }
+    
+    [fileManager createDirectoryAtPath:directoryPath withIntermediateDirectories:YES attributes:nil error:nil];
+    
+    return sequence;
+}
+
 - (NSArray *)sortedSequenceImageURLs {
     
     NSSortDescriptor *createdDateSort = [NSSortDescriptor sortDescriptorWithKey:@"createdDate" ascending:YES];
@@ -52,13 +74,11 @@
     
     SequenceEntry *newEntry = [SequenceEntry insertInCurrentContext];
     
-    newEntry.createdDate = [NSDate date];
-    
     NSString *fullImagePath = [[self sequenceImageDirectory] stringByAppendingPathComponent:newEntry.entryId.stringValue];
     
     NSData *imageData = UIImageJPEGRepresentation(image, 0);
     
-    [imageData writeToFile:fullImagePath atomically:YES];
+    [imageData writeToFile:fullImagePath atomically:NO];
     
     newEntry.originalImagePath = fullImagePath;
     
@@ -72,6 +92,7 @@
     NSString *documentsDirectory = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) firstObject];
     
     return [documentsDirectory stringByAppendingPathComponent:self.sequenceId.stringValue];
+
 }
 
 @end

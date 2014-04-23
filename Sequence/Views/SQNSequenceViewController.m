@@ -38,13 +38,13 @@
     
     [super viewDidLoad];
     
-    self.view.backgroundColor = [UIColor redColor];
-    
     UIBarButtonItem *addEntry = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addNewEntry:)];
     
     self.navigationItem.rightBarButtonItem = addEntry;
     
     self.imageScrubberView = [[SQNImageScrubberView alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(self.view.bounds), CGRectGetHeight(self.view.bounds))];
+    
+    self.imageScrubberView.dataSource = self;
     
     [self.view addSubview:self.imageScrubberView];
     
@@ -82,9 +82,13 @@
 
 - (UIImage *)imageAtIndex:(NSUInteger)index {
     
+    if (index >= self.imagesURLs.count) return nil;
+    
     NSURL *imageURL = self.imagesURLs[index];
     
-    UIImage *image = [UIImage imageWithContentsOfFile:imageURL.path];
+    NSData *data = [NSData dataWithContentsOfFile:imageURL.path];
+    
+    UIImage *image = [UIImage imageWithData:data];
     
     return image;
 }

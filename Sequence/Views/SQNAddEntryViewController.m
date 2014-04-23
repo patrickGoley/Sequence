@@ -18,8 +18,6 @@
     
     [super viewDidLoad];
     
-    self.view.backgroundColor = [UIColor blueColor];
-    
     UIBarButtonItem *doneButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(donePressed:)];
     
     self.navigationItem.rightBarButtonItem = doneButton;
@@ -27,11 +25,22 @@
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(captureStillImage)];
     
     [self.view addGestureRecognizer:tap];
+    
+    UILongPressGestureRecognizer *longPress = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(longPressGestureCallback:)];
+    
+    [self.view addGestureRecognizer:longPress];
 }
 
 - (void)donePressed:(id)sender {
     
     [self dismiss];
+}
+
+#pragma mark - Long Press Gesture
+
+- (void)longPressGestureCallback:(UILongPressGestureRecognizer *)gesture {
+    
+    
 }
 
 #pragma mark - Image Handling

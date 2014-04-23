@@ -88,26 +88,26 @@
     
 	NSError *error;
     
-	AVCaptureDeviceInput *deviceInput = [[AVCaptureDeviceInput alloc] initWithDevice:self.captureDevice error:&error];
+	self.deviceInput = [AVCaptureDeviceInput deviceInputWithDevice:self.captureDevice error:&error];
     
-	if ([self.captureSession canAddInput:deviceInput]) {
+	if ([self.captureSession canAddInput:self.deviceInput]) {
         
-		[self.captureSession addInput:deviceInput];
+		[self.captureSession addInput:self.deviceInput];
 	}
     
     
-    AVCaptureStillImageOutput *stillImageOutput = [[AVCaptureStillImageOutput alloc] init];
+    self.imageOutput = [[AVCaptureStillImageOutput alloc] init];
     
-    stillImageOutput.outputSettings = @{ AVVideoCodecKey: AVVideoCodecJPEG };
+    self.imageOutput.outputSettings = @{ AVVideoCodecKey: AVVideoCodecJPEG };
     
-    if ([self.captureSession canAddOutput:stillImageOutput]) {
+    if ([self.captureSession canAddOutput:self.imageOutput]) {
         
-        [self.captureSession addOutput:stillImageOutput];
+        [self.captureSession addOutput:self.imageOutput];
     }
 	
     self.previewLayer = [[AVCaptureVideoPreviewLayer alloc] initWithSession:self.captureSession];
     self.previewLayer.videoGravity = AVLayerVideoGravityResizeAspect;
-	self.previewLayer.frame = self.view.frame;
+	self.previewLayer.frame = self.view.bounds;
 	[self.view.layer insertSublayer:self.previewLayer atIndex:0];
     
     [self.captureSession commitConfiguration];
@@ -126,7 +126,7 @@
 
 - (void)captureStillImage {
     
-    if(self.imageOutput.isCapturingStillImage || !self.captureSession.isRunning || self.imageOutput.connections.count < 1){
+    if(self.imageOutput.isCapturingStillImage || !self.captureSession.isRunning || !self.imageOutput.connections.firstObject){
         return;
     }
     

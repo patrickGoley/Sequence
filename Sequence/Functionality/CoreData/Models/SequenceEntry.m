@@ -15,4 +15,13 @@
     return @"entryId";
 }
 
++ (instancetype)insertInCurrentContext {
+    
+    SequenceEntry *entry = [super insertInCurrentContext];
+    
+    entry.createdDate = [NSDate date];
+    
+    return entry;
+}
+
 @end
