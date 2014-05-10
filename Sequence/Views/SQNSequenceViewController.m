@@ -42,7 +42,7 @@
     
     self.navigationItem.rightBarButtonItem = addEntry;
     
-    self.imageScrubberView = [[SQNImageScrubberView alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(self.view.bounds), CGRectGetHeight(self.view.bounds))];
+    self.imageScrubberView = [[SQNImageScrubberView alloc] initWithFrame:CGRectMake(0, 39.0f, CGRectGetWidth(self.view.bounds), 427.0f)];
     
     self.imageScrubberView.dataSource = self;
     

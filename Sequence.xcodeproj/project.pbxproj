@@ -40,6 +40,8 @@
 		43CB42C718F7691C00F1166B /* SQNViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 43CB42B418F7691C00F1166B /* SQNViewController.m */; };
 		43CB42D118F7696A00F1166B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 43CB42CE18F7696A00F1166B /* main.m */; };
 		43CB42D218F7696A00F1166B /* Sequence-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 43CB42CF18F7696A00F1166B /* Sequence-Info.plist */; };
+		8EC68FF0191DB94500880B08 /* SQNSequenceSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EC68FEE191DB94500880B08 /* SQNSequenceSettingsViewController.m */; };
+		8EC68FF1191DB94500880B08 /* SQNSequenceSettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8EC68FEF191DB94500880B08 /* SQNSequenceSettingsViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -101,6 +103,9 @@
 		43CB42CE18F7696A00F1166B /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		43CB42CF18F7696A00F1166B /* Sequence-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Sequence-Info.plist"; sourceTree = "<group>"; };
 		43CB42D018F7696A00F1166B /* Sequence-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Sequence-Prefix.pch"; sourceTree = "<group>"; };
+		8EC68FED191DB94500880B08 /* SQNSequenceSettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SQNSequenceSettingsViewController.h; sourceTree = "<group>"; };
+		8EC68FEE191DB94500880B08 /* SQNSequenceSettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SQNSequenceSettingsViewController.m; sourceTree = "<group>"; };
+		8EC68FEF191DB94500880B08 /* SQNSequenceSettingsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SQNSequenceSettingsViewController.xib; sourceTree = "<group>"; };
 		F54CE842540A4F86A3BEAC2F /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		F95CC7E9D09A4FE58023101D /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -285,6 +290,7 @@
 				43BCD4D718F8D86900F831C0 /* Sequence Detail View */,
 				43BCD4E518F8D9C400F831C0 /* Camera View */,
 				43BCD4DD18F8D8AC00F831C0 /* Add Entry View */,
+				8EC68FF2191DB94B00880B08 /* Sequence Settings */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -298,6 +304,16 @@
 				43CB428D18F7691C00F1166B /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		8EC68FF2191DB94B00880B08 /* Sequence Settings */ = {
+			isa = PBXGroup;
+			children = (
+				8EC68FED191DB94500880B08 /* SQNSequenceSettingsViewController.h */,
+				8EC68FEE191DB94500880B08 /* SQNSequenceSettingsViewController.m */,
+				8EC68FEF191DB94500880B08 /* SQNSequenceSettingsViewController.xib */,
+			);
+			name = "Sequence Settings";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -367,6 +383,9 @@
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = "Patrick Goley";
 				TargetAttributes = {
+					4399013418F1C9C700F1F96A = {
+						DevelopmentTeam = KHVTR4JKKT;
+					};
 					4399015518F1C9C700F1F96A = {
 						TestTargetID = 4399013418F1C9C700F1F96A;
 					};
@@ -398,6 +417,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				43BCD4DC18F8D8A700F831C0 /* SQNAddEntryViewController.xib in Resources */,
+				8EC68FF1191DB94500880B08 /* SQNSequenceSettingsViewController.xib in Resources */,
 				43CB42B518F7691C00F1166B /* InfoPlist.strings in Resources */,
 				43BCD4E418F8D9BF00F831C0 /* SQNCameraViewController.xib in Resources */,
 				43CB42BE18F7691C00F1166B /* Images.xcassets in Resources */,
@@ -459,6 +479,7 @@
 				43CB42BB18F7691C00F1166B /* SequenceModel.xcdatamodeld in Sources */,
 				43CB42C718F7691C00F1166B /* SQNViewController.m in Sources */,
 				43BCD4DB18F8D8A700F831C0 /* SQNAddEntryViewController.m in Sources */,
+				8EC68FF0191DB94500880B08 /* SQNSequenceSettingsViewController.m in Sources */,
 				43CB42C018F7691C00F1166B /* SQNAppDelegate.m in Sources */,
 				43CB42BD18F7691C00F1166B /* SQNImageCache.m in Sources */,
 				43CB42BC18F7691C00F1166B /* SQNCoreDataManager.m in Sources */,
@@ -578,10 +599,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Sequence/Sequence-Prefix.pch";
 				INFOPLIST_FILE = "Sequence/Sequence-Info.plist";
 				PRODUCT_NAME = Sequence;
+				PROVISIONING_PROFILE = "0DEB92CE-A7DA-475B-8580-8DBE69FD0E48";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -592,10 +616,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Sequence/Sequence-Prefix.pch";
 				INFOPLIST_FILE = "Sequence/Sequence-Info.plist";
 				PRODUCT_NAME = Sequence;
+				PROVISIONING_PROFILE = "0DEB92CE-A7DA-475B-8580-8DBE69FD0E48";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

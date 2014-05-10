@@ -126,7 +126,7 @@
 
 - (void)captureStillImage {
     
-    if(self.imageOutput.isCapturingStillImage || !self.captureSession.isRunning || !self.imageOutput.connections.firstObject){
+    if(self.imageOutput.isCapturingStillImage || !self.captureSession.isRunning || !self.imageOutput.connections.firstObject) {
         return;
     }
     

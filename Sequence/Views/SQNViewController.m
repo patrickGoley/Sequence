@@ -19,7 +19,7 @@
     self = [self initWithNib];
     if (self) {
         
-        
+        self.edgesForExtendedLayout = UIRectEdgeNone;
     }
     
     return self;
