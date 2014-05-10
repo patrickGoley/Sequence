@@ -7,12 +7,26 @@
 //
 
 #import "SQNAddEntryViewController.h"
+#import "Sequence.h"
 
 @interface SQNAddEntryViewController ()
+
+@property (nonatomic, strong) Sequence *sequence;
 
 @end
 
 @implementation SQNAddEntryViewController
+
+- (instancetype)initWithSequence:(Sequence *)sequence {
+    
+    self = [super init];
+    if (self) {
+        
+        _sequence = sequence;
+    }
+    
+    return self;
+}
 
 - (void)viewDidLoad {
     
@@ -47,7 +61,7 @@
 
 - (void)imageCaptured:(UIImage *)image withMetadata:(NSDictionary *)metadata {
     
-    [self.delegate addEntryViewController:self didCaptureImage:image];
+    [self.sequence addSequenceEntryWithImage:image];
 }
 
 @end

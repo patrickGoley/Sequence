@@ -8,16 +8,10 @@
 
 #import "SQNCameraViewController.h"
 
-@class SQNAddEntryViewController;
-
-@protocol SQNAddEntryViewControllerDelegate <NSObject>
-
-- (void)addEntryViewController:(SQNAddEntryViewController *)addEntryViewController didCaptureImage:(UIImage *)image;
-
-@end
+@class Sequence;
 
 @interface SQNAddEntryViewController : SQNCameraViewController
 
-@property (nonatomic, weak) id<SQNAddEntryViewControllerDelegate> delegate;
+- (instancetype)initWithSequence:(Sequence *)sequence;
 
 @end

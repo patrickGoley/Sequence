@@ -8,6 +8,10 @@
 
 #import "SQNViewController.h"
 
+@class Sequence;
+
 @interface SQNSequenceSettingsViewController : SQNViewController
+
+- (instancetype)initWithSequence:(Sequence *)sequence;
 
 @end

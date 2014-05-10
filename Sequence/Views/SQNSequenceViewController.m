@@ -11,11 +11,11 @@
 #import "SQNImageScrubberView.h"
 #import "SQNAddEntryViewController.h"
 
-@interface SQNSequenceViewController () <SQNImageScrubberViewDataSource, SQNAddEntryViewControllerDelegate>
+@interface SQNSequenceViewController () <SQNImageScrubberViewDataSource>
 
 @property (nonatomic, strong) Sequence *sequence;
 @property (nonatomic, strong) SQNImageScrubberView *imageScrubberView;
-@property (nonatomic, strong) NSMutableArray *imagesURLs;
+@property (nonatomic, strong) NSArray *imagesURLs;
 
 @end
 
@@ -28,7 +28,7 @@
         
         _sequence = sequence;
         
-        _imagesURLs = [[sequence sortedSequenceImageURLs] mutableCopy];
+        _imagesURLs = [sequence sortedSequenceImageURLs];
     }
     
     return self;
@@ -42,11 +42,16 @@
     
     self.navigationItem.rightBarButtonItem = addEntry;
     
-    self.imageScrubberView = [[SQNImageScrubberView alloc] initWithFrame:CGRectMake(0, 39.0f, CGRectGetWidth(self.view.bounds), 427.0f)];
+    self.imageScrubberView = [[SQNImageScrubberView alloc] initWithFrame:CGRectMake(0, 17.0, CGRectGetWidth(self.view.bounds), 427.0f)];
     
     self.imageScrubberView.dataSource = self;
     
     [self.view addSubview:self.imageScrubberView];
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    
+    [super viewWillAppear:animated];
     
     [self.imageScrubberView reloadData];
 }
@@ -55,22 +60,11 @@
 
 - (void)addNewEntry:(id)sender {
     
-    SQNAddEntryViewController *addEntryVC = [[SQNAddEntryViewController alloc] init];
-    
-    addEntryVC.delegate = self;
+    SQNAddEntryViewController *addEntryVC = [[SQNAddEntryViewController alloc] initWithSequence:self.sequence];
     
     UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:addEntryVC];
     
     [self presentViewController:nav animated:YES completion:nil];
-}
-
-- (void)addEntryViewController:(SQNAddEntryViewController *)addEntryViewController didCaptureImage:(UIImage *)image {
-    
-    NSURL *newImageURL = [self.sequence addSequenceEntryWithImage:image];
-    
-    [self.imagesURLs addObject:newImageURL];
-    
-    [self.imageScrubberView reloadData];
 }
 
 #pragma mark - SQNImageScrubberViewDataSource
