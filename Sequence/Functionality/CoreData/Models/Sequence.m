@@ -92,7 +92,6 @@
     NSString *documentsDirectory = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) firstObject];
     
     return [documentsDirectory stringByAppendingPathComponent:self.sequenceId.stringValue];
-
 }
 
 @end
