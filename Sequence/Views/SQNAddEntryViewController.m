@@ -38,6 +38,7 @@
     //preview image
     
     self.previousImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 34.0f, CGRectGetWidth(self.view.bounds), 427.0f)];
+    self.previousImageView.userInteractionEnabled = NO;
     [self.view addSubview:self.previousImageView];
     
     self.previousImageView.alpha = self.sequence.overlayOpacityValue;
@@ -57,6 +58,11 @@
     [self.view addGestureRecognizer:tap];
     
     UILongPressGestureRecognizer *longPress = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(longPressGestureCallback:)];
+    
+    longPress.minimumPressDuration = 0.2f;
+    
+    longPress.allowableMovement = CGFLOAT_MAX;
+    longPress.numberOfTouchesRequired = 1;
     
     [self.view addGestureRecognizer:longPress];
 }
@@ -79,11 +85,16 @@
     
     if (gesture.state == UIGestureRecognizerStateBegan) {
         
+        NSLog(@"long press began");
+        
         [self.captureTimer fire];
         
     } else if (gesture.state == UIGestureRecognizerStateEnded) {
         
+        NSLog(@"long press ended");
+        
         [self.captureTimer invalidate];
+        self.captureTimer = nil;
     }
 }
 
@@ -91,7 +102,7 @@
     
     if (!_captureTimer) {
         
-        _captureTimer = [NSTimer timerWithTimeInterval:self.sequence.holdCaptureIntervalValue target:self selector:@selector(captureStillImage) userInfo:nil repeats:YES];
+        _captureTimer = [NSTimer scheduledTimerWithTimeInterval:self.sequence.holdCaptureIntervalValue target:self selector:@selector(captureStillImage) userInfo:nil repeats:YES];
     }
     
     return _captureTimer;
@@ -100,6 +111,8 @@
 #pragma mark - Image Handling
 
 - (void)imageCaptured:(UIImage *)image withMetadata:(NSDictionary *)metadata {
+    
+    NSLog(@"image captured");
     
     [self.sequence addSequenceEntryWithImage:image];
     
