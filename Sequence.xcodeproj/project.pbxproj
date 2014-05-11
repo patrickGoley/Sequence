@@ -45,6 +45,7 @@
 		8EA995D0191EC658001B9AE4 /* SQNTimeIntervalPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EA995CF191EC658001B9AE4 /* SQNTimeIntervalPickerView.m */; };
 		8EA995D6191ED3FF001B9AE4 /* UIView+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EA995D5191ED3FF001B9AE4 /* UIView+Additions.m */; };
 		8EA995DD191F06C1001B9AE4 /* UISlider+RACSignal.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EA995DC191F06C1001B9AE4 /* UISlider+RACSignal.m */; };
+		8EA995E0191F4962001B9AE4 /* UIImage+Resize.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EA995DF191F4962001B9AE4 /* UIImage+Resize.m */; };
 		8EC68FF0191DB94500880B08 /* SQNSequenceSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EC68FEE191DB94500880B08 /* SQNSequenceSettingsViewController.m */; };
 		8EC68FF1191DB94500880B08 /* SQNSequenceSettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8EC68FEF191DB94500880B08 /* SQNSequenceSettingsViewController.xib */; };
 /* End PBXBuildFile section */
@@ -118,6 +119,8 @@
 		8EA995D5191ED3FF001B9AE4 /* UIView+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Additions.m"; sourceTree = "<group>"; };
 		8EA995DB191F06C1001B9AE4 /* UISlider+RACSignal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UISlider+RACSignal.h"; sourceTree = "<group>"; };
 		8EA995DC191F06C1001B9AE4 /* UISlider+RACSignal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UISlider+RACSignal.m"; sourceTree = "<group>"; };
+		8EA995DE191F4962001B9AE4 /* UIImage+Resize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Resize.h"; sourceTree = "<group>"; };
+		8EA995DF191F4962001B9AE4 /* UIImage+Resize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Resize.m"; sourceTree = "<group>"; };
 		8EC68FED191DB94500880B08 /* SQNSequenceSettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SQNSequenceSettingsViewController.h; sourceTree = "<group>"; };
 		8EC68FEE191DB94500880B08 /* SQNSequenceSettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SQNSequenceSettingsViewController.m; sourceTree = "<group>"; };
 		8EC68FEF191DB94500880B08 /* SQNSequenceSettingsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SQNSequenceSettingsViewController.xib; sourceTree = "<group>"; };
@@ -337,6 +340,8 @@
 		8EA995D3191ED3EA001B9AE4 /* Categories */ = {
 			isa = PBXGroup;
 			children = (
+				8EA995DE191F4962001B9AE4 /* UIImage+Resize.h */,
+				8EA995DF191F4962001B9AE4 /* UIImage+Resize.m */,
 				8EA995D4191ED3FF001B9AE4 /* UIView+Additions.h */,
 				8EA995D5191ED3FF001B9AE4 /* UIView+Additions.m */,
 				8EA995DB191F06C1001B9AE4 /* UISlider+RACSignal.h */,
@@ -515,6 +520,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8EA995E0191F4962001B9AE4 /* UIImage+Resize.m in Sources */,
 				43CB42BA18F7691C00F1166B /* NSManagedObject+Additions.m in Sources */,
 				43BCD4D418F8D5D400F831C0 /* SequenceEntry.m in Sources */,
 				43CB42BB18F7691C00F1166B /* SequenceModel.xcdatamodeld in Sources */,

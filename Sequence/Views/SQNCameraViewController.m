@@ -9,6 +9,7 @@
 #import "SQNCameraViewController.h"
 #import <AVFoundation/AVFoundation.h>
 #import <AssetsLibrary/AssetsLibrary.h>
+#import "UIImage+Resize.h"
 
 @interface SQNCameraViewController ()
 
@@ -142,6 +143,11 @@
             NSDictionary *metadataDictionary = (__bridge_transfer NSDictionary *)metadata;
             
             UIImage *image = [UIImage imageWithData:imageData];
+            
+            image = [UIImage rotate:image andOrientation:UIImageOrientationRight];
+            
+            image = [UIImage imageWithCGImage:image.CGImage
+                                scale:image.scale orientation:UIImageOrientationUpMirrored];
             
             [weakSelf imageCaptured:image withMetadata:metadataDictionary];
         }

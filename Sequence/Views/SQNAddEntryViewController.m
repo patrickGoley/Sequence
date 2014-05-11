@@ -37,7 +37,7 @@
     
     //preview image
     
-    self.previousImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 17.0, CGRectGetWidth(self.view.bounds), 427.0f)];
+    self.previousImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 34.0f, CGRectGetWidth(self.view.bounds), 427.0f)];
     [self.view addSubview:self.previousImageView];
     
     self.previousImageView.alpha = self.sequence.overlayOpacityValue;
