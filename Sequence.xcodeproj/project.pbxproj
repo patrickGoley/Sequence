@@ -40,6 +40,11 @@
 		43CB42C718F7691C00F1166B /* SQNViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 43CB42B418F7691C00F1166B /* SQNViewController.m */; };
 		43CB42D118F7696A00F1166B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 43CB42CE18F7696A00F1166B /* main.m */; };
 		43CB42D218F7696A00F1166B /* Sequence-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 43CB42CF18F7696A00F1166B /* Sequence-Info.plist */; };
+		8EA995CA191EC01F001B9AE4 /* SQNViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EA995C9191EC01F001B9AE4 /* SQNViewModel.m */; };
+		8EA995CD191EC03D001B9AE4 /* SQNSequenceEditViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EA995CC191EC03D001B9AE4 /* SQNSequenceEditViewModel.m */; };
+		8EA995D0191EC658001B9AE4 /* SQNTimeIntervalPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EA995CF191EC658001B9AE4 /* SQNTimeIntervalPickerView.m */; };
+		8EA995D6191ED3FF001B9AE4 /* UIView+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EA995D5191ED3FF001B9AE4 /* UIView+Additions.m */; };
+		8EA995DD191F06C1001B9AE4 /* UISlider+RACSignal.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EA995DC191F06C1001B9AE4 /* UISlider+RACSignal.m */; };
 		8EC68FF0191DB94500880B08 /* SQNSequenceSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EC68FEE191DB94500880B08 /* SQNSequenceSettingsViewController.m */; };
 		8EC68FF1191DB94500880B08 /* SQNSequenceSettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8EC68FEF191DB94500880B08 /* SQNSequenceSettingsViewController.xib */; };
 /* End PBXBuildFile section */
@@ -103,6 +108,16 @@
 		43CB42CE18F7696A00F1166B /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		43CB42CF18F7696A00F1166B /* Sequence-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Sequence-Info.plist"; sourceTree = "<group>"; };
 		43CB42D018F7696A00F1166B /* Sequence-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Sequence-Prefix.pch"; sourceTree = "<group>"; };
+		8EA995C8191EC01F001B9AE4 /* SQNViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SQNViewModel.h; sourceTree = "<group>"; };
+		8EA995C9191EC01F001B9AE4 /* SQNViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SQNViewModel.m; sourceTree = "<group>"; };
+		8EA995CB191EC03D001B9AE4 /* SQNSequenceEditViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SQNSequenceEditViewModel.h; sourceTree = "<group>"; };
+		8EA995CC191EC03D001B9AE4 /* SQNSequenceEditViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SQNSequenceEditViewModel.m; sourceTree = "<group>"; };
+		8EA995CE191EC657001B9AE4 /* SQNTimeIntervalPickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SQNTimeIntervalPickerView.h; sourceTree = "<group>"; };
+		8EA995CF191EC658001B9AE4 /* SQNTimeIntervalPickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SQNTimeIntervalPickerView.m; sourceTree = "<group>"; };
+		8EA995D4191ED3FF001B9AE4 /* UIView+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Additions.h"; sourceTree = "<group>"; };
+		8EA995D5191ED3FF001B9AE4 /* UIView+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Additions.m"; sourceTree = "<group>"; };
+		8EA995DB191F06C1001B9AE4 /* UISlider+RACSignal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UISlider+RACSignal.h"; sourceTree = "<group>"; };
+		8EA995DC191F06C1001B9AE4 /* UISlider+RACSignal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UISlider+RACSignal.m"; sourceTree = "<group>"; };
 		8EC68FED191DB94500880B08 /* SQNSequenceSettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SQNSequenceSettingsViewController.h; sourceTree = "<group>"; };
 		8EC68FEE191DB94500880B08 /* SQNSequenceSettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SQNSequenceSettingsViewController.m; sourceTree = "<group>"; };
 		8EC68FEF191DB94500880B08 /* SQNSequenceSettingsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SQNSequenceSettingsViewController.xib; sourceTree = "<group>"; };
@@ -241,7 +256,9 @@
 		43CB428F18F7691C00F1166B /* Functionality */ = {
 			isa = PBXGroup;
 			children = (
+				8EA995D3191ED3EA001B9AE4 /* Categories */,
 				43CB429018F7691C00F1166B /* CoreData */,
+				8EA995C7191EC003001B9AE4 /* ViewModels */,
 				43CB42A118F7691C00F1166B /* ImageCache */,
 			);
 			path = Functionality;
@@ -306,12 +323,36 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		8EA995C7191EC003001B9AE4 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				8EA995C8191EC01F001B9AE4 /* SQNViewModel.h */,
+				8EA995C9191EC01F001B9AE4 /* SQNViewModel.m */,
+				8EA995CB191EC03D001B9AE4 /* SQNSequenceEditViewModel.h */,
+				8EA995CC191EC03D001B9AE4 /* SQNSequenceEditViewModel.m */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		8EA995D3191ED3EA001B9AE4 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				8EA995D4191ED3FF001B9AE4 /* UIView+Additions.h */,
+				8EA995D5191ED3FF001B9AE4 /* UIView+Additions.m */,
+				8EA995DB191F06C1001B9AE4 /* UISlider+RACSignal.h */,
+				8EA995DC191F06C1001B9AE4 /* UISlider+RACSignal.m */,
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
 		8EC68FF2191DB94B00880B08 /* Sequence Settings */ = {
 			isa = PBXGroup;
 			children = (
 				8EC68FED191DB94500880B08 /* SQNSequenceSettingsViewController.h */,
 				8EC68FEE191DB94500880B08 /* SQNSequenceSettingsViewController.m */,
 				8EC68FEF191DB94500880B08 /* SQNSequenceSettingsViewController.xib */,
+				8EA995CE191EC657001B9AE4 /* SQNTimeIntervalPickerView.h */,
+				8EA995CF191EC658001B9AE4 /* SQNTimeIntervalPickerView.m */,
 			);
 			name = "Sequence Settings";
 			sourceTree = "<group>";
@@ -479,14 +520,19 @@
 				43CB42BB18F7691C00F1166B /* SequenceModel.xcdatamodeld in Sources */,
 				43CB42C718F7691C00F1166B /* SQNViewController.m in Sources */,
 				43BCD4DB18F8D8A700F831C0 /* SQNAddEntryViewController.m in Sources */,
+				8EA995DD191F06C1001B9AE4 /* UISlider+RACSignal.m in Sources */,
 				8EC68FF0191DB94500880B08 /* SQNSequenceSettingsViewController.m in Sources */,
 				43CB42C018F7691C00F1166B /* SQNAppDelegate.m in Sources */,
+				8EA995D0191EC658001B9AE4 /* SQNTimeIntervalPickerView.m in Sources */,
 				43CB42BD18F7691C00F1166B /* SQNImageCache.m in Sources */,
 				43CB42BC18F7691C00F1166B /* SQNCoreDataManager.m in Sources */,
 				43BCD4D318F8D5D400F831C0 /* Sequence.m in Sources */,
 				43BCD4D118F8D5D400F831C0 /* _Sequence.m in Sources */,
+				8EA995D6191ED3FF001B9AE4 /* UIView+Additions.m in Sources */,
 				43CB42C218F7691C00F1166B /* SQNImageScrubberView.m in Sources */,
+				8EA995CD191EC03D001B9AE4 /* SQNSequenceEditViewModel.m in Sources */,
 				43CB42C518F7691C00F1166B /* SQNSequenceViewController.m in Sources */,
+				8EA995CA191EC01F001B9AE4 /* SQNViewModel.m in Sources */,
 				43BCD4D218F8D5D400F831C0 /* _SequenceEntry.m in Sources */,
 				43CB42C318F7691C00F1166B /* SQNSequenceTableViewController.m in Sources */,
 				43BCD4E318F8D9BF00F831C0 /* SQNCameraViewController.m in Sources */,
