@@ -11,6 +11,8 @@
 
 @implementation Sequence
 
+@synthesize sortedImageURLs = _sortedImageURLs;
+
 + (NSString *)primaryKey {
     
     return @"sequenceId";
@@ -49,25 +51,30 @@
     return sequence;
 }
 
-- (NSArray *)sortedSequenceImageURLs {
+- (NSArray *)sortedImageURLs {
     
-    NSSortDescriptor *createdDateSort = [NSSortDescriptor sortDescriptorWithKey:@"createdDate" ascending:YES];
-    
-    NSArray *sortedEntries = [self.entries sortedArrayUsingDescriptors:@[createdDateSort]];
-    
-    NSMutableArray *urls = [NSMutableArray array];
-    
-    for (SequenceEntry *entry in sortedEntries) {
+    if (!_sortedImageURLs) {
         
-        NSURL *imageUrl = [NSURL fileURLWithPath:entry.originalImagePath];
+        NSSortDescriptor *createdDateSort = [NSSortDescriptor sortDescriptorWithKey:@"createdDate" ascending:YES];
         
-        if (imageUrl) {
+        NSArray *sortedEntries = [self.entries sortedArrayUsingDescriptors:@[createdDateSort]];
+        
+        NSMutableArray *urls = [NSMutableArray array];
+        
+        for (SequenceEntry *entry in sortedEntries) {
             
-            [urls addObject:imageUrl];
+            NSURL *imageUrl = [NSURL fileURLWithPath:entry.originalImagePath];
+            
+            if (imageUrl) {
+                
+                [urls addObject:imageUrl];
+            }
         }
+        
+        _sortedImageURLs = [NSArray arrayWithArray:urls];
     }
     
-    return [NSArray arrayWithArray:urls];
+    return _sortedImageURLs;
 }
 
 - (NSURL *)addSequenceEntryWithImage:(UIImage *)image {
@@ -84,7 +91,38 @@
     
     [self addEntriesObject:newEntry];
     
-    return [NSURL fileURLWithPath:fullImagePath];
+    
+    //add new image url to the sorted list
+    
+    NSURL *imageFileURL = [NSURL fileURLWithPath:fullImagePath];
+    
+    NSMutableArray *imageURLs = [self.sortedImageURLs mutableCopy];
+    
+    [imageURLs addObject:imageFileURL];
+    
+    _sortedImageURLs = [NSArray arrayWithArray:imageURLs];
+    
+    return imageFileURL;
+}
+
+- (UIImage *)previewOverlayImage {
+    
+    NSInteger previewOffset = self.overlayImageOffsetValue;
+    
+    NSInteger maxIndex = self.sortedImageURLs.count;
+    
+    NSInteger overlayImageIndex = maxIndex - previewOffset;
+    
+    if (overlayImageIndex >= 0 && overlayImageIndex < maxIndex) {
+        
+        NSURL *imageURL = self.sortedImageURLs[overlayImageIndex];
+        
+        return [UIImage imageWithContentsOfFile:imageURL.path];
+        
+    } else {
+        
+        return nil;
+    }
 }
 
 - (NSString *)sequenceImageDirectory {

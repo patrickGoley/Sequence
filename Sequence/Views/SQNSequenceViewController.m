@@ -76,7 +76,7 @@
 
 - (void)reloadData {
     
-    self.imagesURLs = [self.sequence sortedSequenceImageURLs];
+    self.imagesURLs = self.sequence.sortedImageURLs;
     
     [self.imageScrubberView reloadData];
 }

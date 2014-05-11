@@ -3,10 +3,12 @@
 
 @interface Sequence : _Sequence {}
 
+@property (nonatomic, readonly) NSArray *sortedImageURLs;
+
 + (NSArray *)allSequences;
 
-- (NSArray *)sortedSequenceImageURLs;
-
 - (NSURL *)addSequenceEntryWithImage:(UIImage *)image;
+
+- (UIImage *)previewOverlayImage;
 
 @end

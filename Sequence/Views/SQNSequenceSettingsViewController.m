@@ -1,4 +1,4 @@
-//
+    //
 //  SQNSequenceSettingsViewController.m
 //  Sequence
 //
@@ -13,8 +13,9 @@
 #import "SQNSequenceEditViewModel.h"
 #import "SQNTimeIntervalPickerView.h"
 #import "UISlider+RACSignal.h"
+#import <ReactiveCocoa/RACEXTScope.h>
 
-@interface SQNSequenceSettingsViewController ()
+@interface SQNSequenceSettingsViewController () <UITextFieldDelegate>
 
 @property (weak, nonatomic) IBOutlet UITextField *nameField;
 @property (weak, nonatomic) IBOutlet UILabel *reminderDateLabel;
@@ -55,6 +56,9 @@ static CGFloat pickerHeight = 200;
     
     self.navigationItem.leftBarButtonItem = cancelButton;
     
+    
+    //setup initial values
+    
     self.nameField.text = self.viewModel.name;
     
     self.holdCaptureSlider.value = self.viewModel.captureIntervalPercentage.floatValue;
@@ -63,8 +67,9 @@ static CGFloat pickerHeight = 200;
     
     self.overlayOpacitySlider.value = self.viewModel.overlayOpacity.floatValue;
     
-    self.reminderPickerView = [[SQNTimeIntervalPickerView alloc] initWithFrame:CGRectMake(0, self.view.height - pickerHeight, self.view.height, pickerHeight)];
+//    self.reminderPickerView = [[SQNTimeIntervalPickerView alloc] initWithFrame:CGRectMake(0, self.view.height - pickerHeight, self.view.height, pickerHeight)];
 //    [self.view addSubview:self.reminderPickerView];
+    
     
     [self setupReactions];
 }
@@ -99,9 +104,7 @@ static CGFloat pickerHeight = 200;
     
     //update view model values from UI
     
-    RAC(self.viewModel, name) = [self.nameField.rac_textSignal map:^id(id value) {
-        return value;
-    }];
+    RAC(self.viewModel, name) = self.nameField.rac_textSignal;
     
     RAC(self.viewModel, reminderUnits) = self.reminderPickerView.unitsChangedSignal;
     
@@ -126,6 +129,15 @@ static CGFloat pickerHeight = 200;
     RAC(self.captureLabel, text) = self.viewModel.captureIntervalTextSignal;
     
     RAC(self.opacityLabel, text) = self.viewModel.opacityTextSignal;
+}
+
+#pragma mark - UITextField
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+    
+    [textField resignFirstResponder];
+    
+    return NO;
 }
 
 - (void)donePressed:(id)sender {
