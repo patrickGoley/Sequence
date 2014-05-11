@@ -46,6 +46,12 @@
 		8EA995D6191ED3FF001B9AE4 /* UIView+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EA995D5191ED3FF001B9AE4 /* UIView+Additions.m */; };
 		8EA995DD191F06C1001B9AE4 /* UISlider+RACSignal.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EA995DC191F06C1001B9AE4 /* UISlider+RACSignal.m */; };
 		8EA995E0191F4962001B9AE4 /* UIImage+Resize.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EA995DF191F4962001B9AE4 /* UIImage+Resize.m */; };
+		8EA995E4191F58DC001B9AE4 /* SQNThemeManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EA995E3191F58DC001B9AE4 /* SQNThemeManager.m */; };
+		8EA995E8191F5A39001B9AE4 /* UIColor-Expanded.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EA995E7191F5A39001B9AE4 /* UIColor-Expanded.m */; };
+		8EA995EB191F5A5B001B9AE4 /* NSDictionary+SafeParsing.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EA995EA191F5A5B001B9AE4 /* NSDictionary+SafeParsing.m */; };
+		8EA995EE191F5B4C001B9AE4 /* NSParagraphStyle+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EA995ED191F5B4C001B9AE4 /* NSParagraphStyle+Additions.m */; };
+		8EA995F0191F5BD7001B9AE4 /* default_theme.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8EA995EF191F5BD7001B9AE4 /* default_theme.plist */; };
+		8EA995F3191F5C0B001B9AE4 /* SQNThemeKeys.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EA995F2191F5C0B001B9AE4 /* SQNThemeKeys.m */; };
 		8EC68FF0191DB94500880B08 /* SQNSequenceSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EC68FEE191DB94500880B08 /* SQNSequenceSettingsViewController.m */; };
 		8EC68FF1191DB94500880B08 /* SQNSequenceSettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8EC68FEF191DB94500880B08 /* SQNSequenceSettingsViewController.xib */; };
 /* End PBXBuildFile section */
@@ -121,6 +127,17 @@
 		8EA995DC191F06C1001B9AE4 /* UISlider+RACSignal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UISlider+RACSignal.m"; sourceTree = "<group>"; };
 		8EA995DE191F4962001B9AE4 /* UIImage+Resize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Resize.h"; sourceTree = "<group>"; };
 		8EA995DF191F4962001B9AE4 /* UIImage+Resize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Resize.m"; sourceTree = "<group>"; };
+		8EA995E2191F58DC001B9AE4 /* SQNThemeManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SQNThemeManager.h; sourceTree = "<group>"; };
+		8EA995E3191F58DC001B9AE4 /* SQNThemeManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SQNThemeManager.m; sourceTree = "<group>"; };
+		8EA995E6191F5A39001B9AE4 /* UIColor-Expanded.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor-Expanded.h"; sourceTree = "<group>"; };
+		8EA995E7191F5A39001B9AE4 /* UIColor-Expanded.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor-Expanded.m"; sourceTree = "<group>"; };
+		8EA995E9191F5A5B001B9AE4 /* NSDictionary+SafeParsing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+SafeParsing.h"; sourceTree = "<group>"; };
+		8EA995EA191F5A5B001B9AE4 /* NSDictionary+SafeParsing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+SafeParsing.m"; sourceTree = "<group>"; };
+		8EA995EC191F5B4C001B9AE4 /* NSParagraphStyle+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSParagraphStyle+Additions.h"; sourceTree = "<group>"; };
+		8EA995ED191F5B4C001B9AE4 /* NSParagraphStyle+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSParagraphStyle+Additions.m"; sourceTree = "<group>"; };
+		8EA995EF191F5BD7001B9AE4 /* default_theme.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = default_theme.plist; sourceTree = "<group>"; };
+		8EA995F1191F5C0B001B9AE4 /* SQNThemeKeys.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SQNThemeKeys.h; sourceTree = "<group>"; };
+		8EA995F2191F5C0B001B9AE4 /* SQNThemeKeys.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SQNThemeKeys.m; sourceTree = "<group>"; };
 		8EC68FED191DB94500880B08 /* SQNSequenceSettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SQNSequenceSettingsViewController.h; sourceTree = "<group>"; };
 		8EC68FEE191DB94500880B08 /* SQNSequenceSettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SQNSequenceSettingsViewController.m; sourceTree = "<group>"; };
 		8EC68FEF191DB94500880B08 /* SQNSequenceSettingsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SQNSequenceSettingsViewController.xib; sourceTree = "<group>"; };
@@ -261,6 +278,7 @@
 			children = (
 				8EA995D3191ED3EA001B9AE4 /* Categories */,
 				43CB429018F7691C00F1166B /* CoreData */,
+				8EA995E1191F58CA001B9AE4 /* Theme */,
 				8EA995C7191EC003001B9AE4 /* ViewModels */,
 				43CB42A118F7691C00F1166B /* ImageCache */,
 			);
@@ -340,6 +358,12 @@
 		8EA995D3191ED3EA001B9AE4 /* Categories */ = {
 			isa = PBXGroup;
 			children = (
+				8EA995EC191F5B4C001B9AE4 /* NSParagraphStyle+Additions.h */,
+				8EA995ED191F5B4C001B9AE4 /* NSParagraphStyle+Additions.m */,
+				8EA995E9191F5A5B001B9AE4 /* NSDictionary+SafeParsing.h */,
+				8EA995EA191F5A5B001B9AE4 /* NSDictionary+SafeParsing.m */,
+				8EA995E6191F5A39001B9AE4 /* UIColor-Expanded.h */,
+				8EA995E7191F5A39001B9AE4 /* UIColor-Expanded.m */,
 				8EA995DE191F4962001B9AE4 /* UIImage+Resize.h */,
 				8EA995DF191F4962001B9AE4 /* UIImage+Resize.m */,
 				8EA995D4191ED3FF001B9AE4 /* UIView+Additions.h */,
@@ -348,6 +372,18 @@
 				8EA995DC191F06C1001B9AE4 /* UISlider+RACSignal.m */,
 			);
 			path = Categories;
+			sourceTree = "<group>";
+		};
+		8EA995E1191F58CA001B9AE4 /* Theme */ = {
+			isa = PBXGroup;
+			children = (
+				8EA995EF191F5BD7001B9AE4 /* default_theme.plist */,
+				8EA995E2191F58DC001B9AE4 /* SQNThemeManager.h */,
+				8EA995E3191F58DC001B9AE4 /* SQNThemeManager.m */,
+				8EA995F1191F5C0B001B9AE4 /* SQNThemeKeys.h */,
+				8EA995F2191F5C0B001B9AE4 /* SQNThemeKeys.m */,
+			);
+			path = Theme;
 			sourceTree = "<group>";
 		};
 		8EC68FF2191DB94B00880B08 /* Sequence Settings */ = {
@@ -465,6 +501,7 @@
 				43BCD4DC18F8D8A700F831C0 /* SQNAddEntryViewController.xib in Resources */,
 				8EC68FF1191DB94500880B08 /* SQNSequenceSettingsViewController.xib in Resources */,
 				43CB42B518F7691C00F1166B /* InfoPlist.strings in Resources */,
+				8EA995F0191F5BD7001B9AE4 /* default_theme.plist in Resources */,
 				43BCD4E418F8D9BF00F831C0 /* SQNCameraViewController.xib in Resources */,
 				43CB42BE18F7691C00F1166B /* Images.xcassets in Resources */,
 				43CB42C418F7691C00F1166B /* SQNSequenceTableViewController.xib in Resources */,
@@ -526,18 +563,23 @@
 				43CB42BB18F7691C00F1166B /* SequenceModel.xcdatamodeld in Sources */,
 				43CB42C718F7691C00F1166B /* SQNViewController.m in Sources */,
 				43BCD4DB18F8D8A700F831C0 /* SQNAddEntryViewController.m in Sources */,
+				8EA995EB191F5A5B001B9AE4 /* NSDictionary+SafeParsing.m in Sources */,
+				8EA995E8191F5A39001B9AE4 /* UIColor-Expanded.m in Sources */,
 				8EA995DD191F06C1001B9AE4 /* UISlider+RACSignal.m in Sources */,
 				8EC68FF0191DB94500880B08 /* SQNSequenceSettingsViewController.m in Sources */,
 				43CB42C018F7691C00F1166B /* SQNAppDelegate.m in Sources */,
 				8EA995D0191EC658001B9AE4 /* SQNTimeIntervalPickerView.m in Sources */,
 				43CB42BD18F7691C00F1166B /* SQNImageCache.m in Sources */,
 				43CB42BC18F7691C00F1166B /* SQNCoreDataManager.m in Sources */,
+				8EA995F3191F5C0B001B9AE4 /* SQNThemeKeys.m in Sources */,
 				43BCD4D318F8D5D400F831C0 /* Sequence.m in Sources */,
 				43BCD4D118F8D5D400F831C0 /* _Sequence.m in Sources */,
 				8EA995D6191ED3FF001B9AE4 /* UIView+Additions.m in Sources */,
 				43CB42C218F7691C00F1166B /* SQNImageScrubberView.m in Sources */,
 				8EA995CD191EC03D001B9AE4 /* SQNSequenceEditViewModel.m in Sources */,
 				43CB42C518F7691C00F1166B /* SQNSequenceViewController.m in Sources */,
+				8EA995EE191F5B4C001B9AE4 /* NSParagraphStyle+Additions.m in Sources */,
+				8EA995E4191F58DC001B9AE4 /* SQNThemeManager.m in Sources */,
 				8EA995CA191EC01F001B9AE4 /* SQNViewModel.m in Sources */,
 				43BCD4D218F8D5D400F831C0 /* _SequenceEntry.m in Sources */,
 				43CB42C318F7691C00F1166B /* SQNSequenceTableViewController.m in Sources */,

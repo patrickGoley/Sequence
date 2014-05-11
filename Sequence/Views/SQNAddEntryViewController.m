@@ -76,6 +76,8 @@
     
     UIImage *previewImage = [self.sequence previewOverlayImage];
     
+    NSLog(@"image: %@", previewImage);
+    
     self.previousImageView.image = previewImage;
 }
 

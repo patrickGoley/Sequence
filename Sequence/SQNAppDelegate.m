@@ -9,6 +9,7 @@
 #import "SQNAppDelegate.h"
 #import "SQNSequenceViewController.h"
 #import "Sequence.h"
+#import "SQNThemeManager.h"
 
 @interface SQNAppDelegate ()
 
@@ -19,6 +20,8 @@
 @implementation SQNAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    
+    [SQNThemeManager manager];
     
     self.keyWindow = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
